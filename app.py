@@ -171,5 +171,9 @@ app.add_url_rule(
 # =================================================================
 
 if __name__ == '__main__':
+    # Get port from environment variable (Heroku sets this)
+    # or use 5000 as default
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    print(f"Starting server on port {port}")
+    # Important: Disable threaded mode on Heroku because otherwise it will throw an error
+    app.run(host='0.0.0.0', port=port, debug=False, threaded=False)
