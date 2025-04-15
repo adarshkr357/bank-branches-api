@@ -3,7 +3,7 @@ flask-sqlalchemy==3.1.1
 graphene==3.3
 graphene-sqlalchemy==2.3.0
 flask-graphql==2.0.1
-pandas==2.1.4
 graphql-core==3.2.3
 graphql-relay==3.2.0
 graphql-server-core==2.0.0
+pandas
