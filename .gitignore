@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+
+# Virtual Environment
+venv/
+
+# Database
+*.sqlite3
+*.db
+
+# IDE files
+.vscode/
+
+# Miscellaneous
+advanced/
+bank_branches.db
+bank_branches.db-journal
+
+# Heroku
+.env

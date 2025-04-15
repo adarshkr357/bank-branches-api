@@ -1,0 +1,6 @@
+flask
+flask-sqlalchemy
+graphene
+graphene-sqlalchemy
+flask-graphql
+pandas
