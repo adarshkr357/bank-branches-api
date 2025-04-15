@@ -15,9 +15,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bank_branches.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-# Initialize database before first request
-@app.before_first_request
-def initialize_database():
+# Initialize database directly with app context
+with app.app_context():
     init_db()
 
 # ==================================================================
