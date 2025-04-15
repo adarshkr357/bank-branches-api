@@ -4,14 +4,18 @@ from flask import Flask, jsonify, request
 from flask_graphql import GraphQLView
 import graphene
 from graphene import relay
+from dotenv import load_dotenv
 from graphene_sqlalchemy import SQLAlchemyObjectType, SQLAlchemyConnectionField
 
 from database import db, init_db
 from models import Bank, Branch
 
+# Load environment variables from .env file if it exists
+load_dotenv()
+
 # Initialize Flask app
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bank_branches.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///bank_branches.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
@@ -173,7 +177,7 @@ app.add_url_rule(
 if __name__ == '__main__':
     # Get port from environment variable (Heroku sets this)
     # or use 5000 as default
-    port = int(os.environ.get("PORT", 5000))
+    port = os.getenv("PORT", 5000)
     print(f"Starting server on port {port}")
     # Important: Disable threaded mode on Heroku because otherwise it will throw an error
     app.run(host='0.0.0.0', port=port, debug=False, threaded=False)
