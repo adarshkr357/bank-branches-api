@@ -9,3 +9,4 @@ graphql-relay>=2.0.0,<3.0
 graphql-server-core>=1.1.1,<2.0
 pandas
 python-dotenv
+gunicorn
