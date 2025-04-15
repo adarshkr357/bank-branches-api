@@ -179,5 +179,4 @@ if __name__ == '__main__':
     # or use 5000 as default
     port = os.getenv("PORT", 5000)
     print(f"Starting server on port {port}")
-    # Important: Disable threaded mode on Heroku because otherwise it will throw an error
-    app.run(host='0.0.0.0', port=port, debug=False, threaded=False)
+    app.run(host='0.0.0.0', port=port)
