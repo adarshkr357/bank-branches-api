@@ -3,11 +3,6 @@
   "description": "A comprehensive API solution for querying bank branch information using both REST and GraphQL approaches. This project demonstrates clean architecture, database integration, and modern API design principles.",
   "repository": "https://github.com/adarshkr357/bank-branches-api",
   "keywords": ["python", "flask", "graphql", "rest-api", "bank-api", "sqlalchemy", "api-server", "flask-sqlalchemy", "graphene", "banking", "database", "branch-locator", "heroku-ready", "sqlite"],
-  "env": {
-    "FLASK_APP": {
-      "value": "app.py"
-    }
-  },
   "buildpacks": [
     {
       "url": "heroku/python"
