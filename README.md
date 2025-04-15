@@ -86,7 +86,7 @@ Click the "Deploy to Heroku" button at the top of this README to deploy the appl
 
 ## Time Taken
 
-Approximately 4 hours to complete this assignment.
+Approximately 8 hours to complete this assignment.
 
 ## Code Structure
 
