@@ -2,7 +2,7 @@
 
 A simple API server for querying bank branches data using both REST API and GraphQL approaches.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/adarshkr357/bank-branches-api)
 
 ## Features
 
